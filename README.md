@@ -6,8 +6,9 @@ Usage:
 1. Install image
 2. Create user `cage`
 3. Create file `kiosk.sh` in `/home/cage`
-  - the file should contain a command to start your intended kiosk program
+    - the file should contain a command to start your intended kiosk program
 4. Make `kiosk.sh` executable
+5. `systemctl enable cage@tty1.service`
 
 ## Installation
 
