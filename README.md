@@ -1,8 +1,13 @@
 # wl-kiosk &nbsp; [![bluebuild build badge](https://github.com/xynydev/wl-kiosk/actions/workflows/build.yml/badge.svg)](https://github.com/xynydev/wl-kiosk/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+A cage-based configurable Wayland kiosk image.
 
-After setup, it is recommended you update this README to describe your custom image.
+Usage:
+1. Install image
+2. Create user `cage`
+3. Create file `kiosk.sh` in `/home/cage`
+  - the file should contain a command to start your intended kiosk program
+4. Make `kiosk.sh` executable
 
 ## Installation
 
