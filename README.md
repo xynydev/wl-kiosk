@@ -8,7 +8,8 @@ Usage:
 3. Create file `kiosk.sh` in `/home/cage`
     - the file should contain a command to start your intended kiosk program
 4. Make `kiosk.sh` executable
-5. `systemctl enable cage@tty1.service`
+5. `systemctl enable cage@tty7.service`
+6. `systemctl set-default graphical.target`
 
 ## Installation
 
