@@ -11,6 +11,7 @@ modules:
       packages:
         - cage
         - tailscale
+        - foot
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
