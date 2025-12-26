@@ -2,7 +2,7 @@
 
 A cage-based configurable Wayland kiosk image.
 
-Usage:
+Usage (with cage systemd unit, not confirmed as working):
 1. Install image
 2. Create user `cage`
 3. Create file `kiosk.sh` in `/home/cage`
@@ -10,6 +10,20 @@ Usage:
 4. Make `kiosk.sh` executable
 5. `systemctl enable cage@tty7.service`
 6. `systemctl set-default graphical.target`
+
+Usage (with getty-autologin systemd unit, confirmed as working):
+1. Install image
+2. Create user `cage`
+3. Create file `kiosk.sh` in `/home/cage`
+    - the file should contain a command to start your intended kiosk program
+4. Make `kiosk.sh` executable
+5. `systemctl enable getty-autologin@tty1.service`
+6. Add to the end of `.bashrc`
+    ```bash
+    if [[ "$(tty)" = "/dev/tty1" ]]; then
+      cage /home/cage/kiosk.sh
+    fi
+    ```
 
 ## Installation
 
