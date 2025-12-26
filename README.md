@@ -21,7 +21,7 @@ Usage (with getty-autologin systemd unit, confirmed as working):
 6. Add to the end of `.bashrc`
     ```bash
     if [[ "$(tty)" = "/dev/tty1" ]]; then
-      cage /home/cage/kiosk.sh
+      watch "cage /home/cage/kiosk.sh"
     fi
     ```
 
