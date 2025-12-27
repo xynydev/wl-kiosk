@@ -18,7 +18,8 @@ Usage (with getty-autologin systemd unit, confirmed as working):
     - the file should contain a command to start your intended kiosk program
 4. Make `kiosk.sh` executable
 5. `systemctl enable getty-autologin@tty1.service`
-6. Add to the end of `.bashrc`
+6. `systemctl disable getty@tty1.service`
+7. Add to the end of `.bashrc`
     ```bash
     if [[ "$(tty)" = "/dev/tty1" ]]; then
       watch "cage /home/cage/kiosk.sh"
