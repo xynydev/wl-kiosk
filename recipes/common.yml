@@ -12,6 +12,8 @@ modules:
         - cage
         - tailscale
         - foot
+        - wlr-randr
+        - kanshi
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
